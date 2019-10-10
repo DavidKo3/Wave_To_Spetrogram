@@ -13,6 +13,7 @@ import cv2
 from tqdm import tqdm
 # from scipy.misc import imsave
 
+
 def create_fold_spectrograms(fold):
     spectrogram_path = Path('/data2/davidk/UrbanSound8K/spectrogram')
     audio_path = Path('/data2/davidk/UrbanSound8K/audio')
