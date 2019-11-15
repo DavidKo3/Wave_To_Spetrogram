@@ -14,9 +14,10 @@ from tqdm import tqdm
 # from scipy.misc import imsave
 
 
-def create_fold_spectrograms(fold):
-    spectrogram_path = Path('/data2/davidk/UrbanSound8K/spectrogram')
-    audio_path = Path('/data2/davidk/UrbanSound8K/audio')
+def create_fold_spectrograms(wave_dir):
+
+    spectrogram_path = Path('../spectrogram_dir')
+    audio_path = Path(wave_dir)
     print(f'Processing fold {fold}')
     if not os.path.exists(spectrogram_path):
         os.mkdir(spectrogram_path)
@@ -34,6 +35,6 @@ def create_fold_spectrograms(fold):
         plt.savefig(filename, dpi=400, bbox_inches='tight',pad_inches=0)
         plt.close('all')
 
-
-for i in range(1, 11):
-    create_fold_spectrograms(str(i))
+if __name__ == '__main__':
+    wave_dir = "../wave_dir"
+    create_fold_spectrograms(wave_dir)
