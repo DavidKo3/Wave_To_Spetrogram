@@ -35,6 +35,7 @@ def create_fold_spectrograms(wave_dir):
         plt.savefig(filename, dpi=400, bbox_inches='tight',pad_inches=0)
         plt.close('all')
 
+
 if __name__ == '__main__':
     wave_dir = "../wave_dir"
     create_fold_spectrograms(wave_dir)
